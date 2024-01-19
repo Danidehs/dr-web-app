@@ -1,11 +1,15 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 
 const Home = () => {
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-4xl font-bold text-center my-10'>
+    <div style={{ padding: 20 }}>
+      <Typography
+        variant='h4'
+        style={{ textAlign: 'center', marginBottom: 20, marginTop: 20 }}
+      >
         Welcome to Our Clinic
-      </h1>
+      </Typography>
       <p className='text-center'>
         Providing expert care in aesthetic medicine.
       </p>

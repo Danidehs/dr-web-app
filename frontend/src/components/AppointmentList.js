@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Typography,
+  Button,
+} from '@mui/material';
 
 const AppointmentsList = () => {
   const [appointments, setAppointments] = useState([]);
@@ -26,38 +37,48 @@ const AppointmentsList = () => {
   };
 
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-4xl font-bold text-center my-10'>Appointments</h1>
-      <table className='min-w-full table-auto'>
-        <thead>
-          <tr>
-            <th className='px-4 py-2'>Patient Name</th>
-            <th className='px-4 py-2'>Email</th>
-            <th className='px-4 py-2'>Date</th>
-            <th className='px-4 py-2'>Time</th>
-            <th className='px-4 py-2'>Treatment Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          {appointments.map((appointment, index) => (
-            <tr key={index}>
-              <td className='border px-4 py-2'>{appointment.patientName}</td>
-              <td className='border px-4 py-2'>{appointment.email}</td>
-              <td className='border px-4 py-2'>
-                {new Date(appointment.date).toLocaleDateString()}
-              </td>
-              <td className='border px-4 py-2'>{appointment.time}</td>
-              <td className='border px-4 py-2'>{appointment.treatmentType}</td>
-              <button
-                onClick={() => deleteAppointment(appointment._id)}
-                className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
-              >
-                Delete
-              </button>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div style={{ padding: 20 }}>
+      <Typography
+        variant='h4'
+        style={{ textAlign: 'center', marginBottom: 20 }}
+      >
+        Appointments
+      </Typography>
+      <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Patient Name</TableCell>
+              <TableCell>Email</TableCell>
+              <TableCell>Date</TableCell>
+              <TableCell>Time</TableCell>
+              <TableCell>Treatment</TableCell>
+              <TableCell>Delete</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {appointments.map((appointment) => (
+              <TableRow key={appointment._id}>
+                <TableCell>{appointment.patientName}</TableCell>
+                <TableCell>{appointment.email}</TableCell>
+                <TableCell>
+                  {new Date(appointment.date).toLocaleDateString()}
+                </TableCell>
+                <TableCell>{appointment.time}</TableCell>
+                <TableCell>{appointment.treatmentType}</TableCell>
+                <TableCell>
+                  <Button
+                    color='secondary'
+                    onClick={() => deleteAppointment(appointment._id)}
+                  >
+                    Delete
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 };

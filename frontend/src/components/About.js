@@ -1,9 +1,15 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 
 const About = () => {
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-4xl font-bold text-center my-10'>About the Doctor</h1>
+    <div style={{ padding: 20 }}>
+      <Typography
+        variant='h4'
+        style={{ textAlign: 'center', marginBottom: 20, marginTop: 20 }}
+      >
+        About the Doctor
+      </Typography>
       <p className='text-center'>
         Dr. Erika Serna, a renowned specialist in aesthetic medicine...
       </p>

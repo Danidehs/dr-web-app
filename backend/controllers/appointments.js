@@ -14,6 +14,7 @@ const createAppointment = async (req, res) => {
     patientName: req.body.patientName,
     email: req.body.email,
     date: req.body.date,
+    time: req.body.time,
     treatmentType: req.body.treatmentType,
   });
 

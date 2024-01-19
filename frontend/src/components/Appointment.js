@@ -79,7 +79,7 @@ const Appointment = () => {
         date: '',
         time: '',
         treatmentType: '',
-      }); // Reset form
+      });
     } catch (error) {
       console.error('Error submitting appointment:', error);
     }
@@ -126,7 +126,7 @@ const Appointment = () => {
               >
                 <MenuItem value='Botox'>Botox</MenuItem>
                 <MenuItem value='Fillers'>Fillers</MenuItem>
-                {/* Add more treatment options as needed */}
+                <MenuItem value='Skincare Treatment'>Skincare</MenuItem>
               </Select>
             </FormControl>
           </Grid>

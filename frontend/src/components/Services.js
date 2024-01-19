@@ -24,7 +24,7 @@ const Services = () => {
     <div style={{ padding: 20 }}>
       <Typography
         variant='h4'
-        style={{ textAlign: 'center', marginBottom: 20 }}
+        style={{ textAlign: 'center', marginBottom: 20, marginTop: 20 }}
       >
         Our Services
       </Typography>
@@ -44,7 +44,7 @@ const Services = () => {
               }}
             >
               <CardContent style={{ flexGrow: 1 }}>
-                <Typography variant='h5' component='h2'>
+                <Typography variant='h6' component='h2'>
                   {service.title}
                 </Typography>
                 <Typography

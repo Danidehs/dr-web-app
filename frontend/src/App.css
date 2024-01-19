@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  max-width: 600px; /* Adjust the max-width as per your design */
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+}

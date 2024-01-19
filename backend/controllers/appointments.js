@@ -25,7 +25,20 @@ const createAppointment = async (req, res) => {
   }
 };
 
+const deleteAppointment = async (req, res) => {
+  try {
+    const appointment = await Appointment.findByIdAndDelete(req.params.id);
+    if (!appointment) {
+      return res.status(404).send('No appointment found');
+    }
+    res.status(200).send('Appointment deleted');
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllAppointments,
   createAppointment,
+  deleteAppointment,
 };

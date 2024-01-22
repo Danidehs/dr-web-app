@@ -11,6 +11,7 @@ import {
   Typography,
   Button,
 } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete'; // or CloseIcon for an 'X' icon
 
 const AppointmentsList = () => {
   const [appointments, setAppointments] = useState([]);
@@ -48,12 +49,12 @@ const AppointmentsList = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Patient Name</TableCell>
+              <TableCell>Patient</TableCell>
               <TableCell>Email</TableCell>
               <TableCell>Date</TableCell>
               <TableCell>Time</TableCell>
               <TableCell>Treatment</TableCell>
-              <TableCell>Delete</TableCell>
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>
@@ -68,10 +69,10 @@ const AppointmentsList = () => {
                 <TableCell>{appointment.treatmentType}</TableCell>
                 <TableCell>
                   <Button
-                    color='secondary'
                     onClick={() => deleteAppointment(appointment._id)}
+                    color='error'
                   >
-                    Delete
+                    <DeleteIcon />
                   </Button>
                 </TableCell>
               </TableRow>

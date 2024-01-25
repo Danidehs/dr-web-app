@@ -46,14 +46,16 @@ const AppointmentsList = () => {
         Appointments
       </Typography>
       <TableContainer component={Paper}>
-        <Table>
+        <Table sx={{ minWidth: 650 }}>
           <TableHead>
-            <TableRow>
-              <TableCell>Patient</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Date</TableCell>
-              <TableCell>Time</TableCell>
-              <TableCell>Treatment</TableCell>
+            <TableRow
+              style={{ backgroundColor: '#cccccc' /*fontWeight: 'bold'*/ }}
+            >
+              <TableCell align='center'>Patient</TableCell>
+              <TableCell align='center'>Email</TableCell>
+              <TableCell align='center'>Date</TableCell>
+              <TableCell align='center'>Time</TableCell>
+              <TableCell align='center'>Treatment</TableCell>
               <TableCell />
             </TableRow>
           </TableHead>

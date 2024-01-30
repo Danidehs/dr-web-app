@@ -1,0 +1,122 @@
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, .MuiButton-root {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply a global font family */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Light background for the whole page */
+    color: #333333; /* Primary text color */
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #2e7d32; /* Dark green background */
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navigation styles */
+  .navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Hero section styles */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 40px 30px;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Services section styles */
+  .services-section {
+    background-color: #ffffff; /* White background */
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .service-card {
+    flex-basis: calc(33.333% - 20px); /* Subtracting the gap */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .service-card h4 {
+    color: #2e7d32; /* Dark green color for service title */
+    margin-bottom: 15px;
+  }
+  
+  /* Contact section styles */
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background-color: #ffffff;
+  }
+  
+  .contact-form {
+    flex-basis: 50%;
+  }
+  
+  .contact-details {
+    flex-basis: 40%;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  
+  /* Utility classes for margins and padding */
+  .mt-20 { margin-top: 20px; }
+  .mb-20 { margin-bottom: 20px; }
+  .pt-20 { padding-top: 20px; }
+  .pb-20 { padding-bottom: 20px; }
+  
+  /* Button styles */
+  .button {
+    background-color: #ffa726; /* Orange color for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+  }
+  

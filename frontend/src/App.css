@@ -38,10 +38,10 @@
 }
 
 .app-container {
-  max-width: 800px; /* Adjust the max-width as per your design */
+  max-width: 800px; 
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 @media (max-width: 768px) {
@@ -49,3 +49,26 @@
     padding: 10px;
   }
 }
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.MuiButton-fullWidth {
+  background-color: #4caf50; 
+}
+
+.MuiTypography-h4, .MuiTypography-h5 {
+  color: #2e7d32; 
+}
+

@@ -182,6 +182,7 @@ const Appointment = () => {
               variant='contained'
               color='secondary'
               size='large'
+              className='goldGradient'
               style={{ marginTop: '16px', borderRadius: '10px' }}
             >
               Book Appointment

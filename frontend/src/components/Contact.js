@@ -54,6 +54,7 @@ const Contact = () => {
               variant='contained'
               size='large'
               color='secondary'
+              className='goldGradient'
               style={{ marginTop: '16px', borderRadius: '10px' }}
             >
               Send Message

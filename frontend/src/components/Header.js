@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => {
   const theme = useTheme();
   return {
     appBar: {
-      backgroundColor: '#4caf50',
+      backgroundColor: '#7ce380',
     },
     logo: {
       flexGrow: 1,
@@ -49,6 +49,7 @@ const Header = () => {
           <Button
             color='secondary'
             variant='contained'
+            className='goldGradient'
             style={{ marginLeft: '15px', borderRadius: '50px' }}
           >
             Book Now

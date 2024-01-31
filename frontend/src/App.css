@@ -38,11 +38,10 @@
 }
 
 .app-container {
-  max-width: 700px; 
-  background-color: #d5c069;
+  max-width: 1000px; 
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  /* box-shadow: 4px 0 10px -2px rgba(0,0,0,0.2), -4px 0 10px -2px rgba(0,0,0,0.2);  */
 }
 
 @media (max-width: 768px) {
@@ -55,7 +54,7 @@
 html body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #4caf50; /* #149165; */
+  background-color: #c9f4cb; /* #149165; */
   color: #333;
   line-height: 1.6;
 }
@@ -70,7 +69,7 @@ html body .MuiTypography-h2,
 html body .MuiTypography-h3,
 html body .MuiTypography-h4 {
   font-weight: bold; 
-  color: white; 
+  color: #cdb450; 
 }
 
 html body .button, html body .MuiButton-containedSecondary {
@@ -88,4 +87,8 @@ html body .formContainerBox {
   box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
   border-radius: 12px; 
   margin: 5%; 
+}
+
+.goldGradient {
+  background: linear-gradient(45deg, #f9f295, #e0aa3e, #faf398, #b88a44);
 }

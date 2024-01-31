@@ -14,7 +14,7 @@ import './App.css';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4caf50',
+      main: '#7ce380',
     },
     secondary: {
       main: '#cdb450',
@@ -26,17 +26,19 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/bookAppointment' element={<Appointment />} />
-        </Routes>
-        {/* <AppointmentsList /> */}
-      </Router>
+      <div className='app-container'>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/bookAppointment' element={<Appointment />} />
+          </Routes>
+          {/* <AppointmentsList /> */}
+        </Router>
+      </div>
     </ThemeProvider>
   );
 };

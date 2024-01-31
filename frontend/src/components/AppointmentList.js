@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { makeStyles } from '@mui/styles';
 import {
   Table,
   TableBody,
@@ -10,10 +11,18 @@ import {
   Paper,
   Typography,
   Button,
+  Container,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'; // or CloseIcon for an 'X' icon
 
+const useStyles = makeStyles((theme) => ({
+  tableContainer: {
+    marginTop: theme.spacing(4),
+  },
+}));
+
 const AppointmentsList = () => {
+  const classes = useStyles();
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
@@ -38,14 +47,14 @@ const AppointmentsList = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <Container>
       <Typography
         variant='h4'
         style={{ textAlign: 'center', marginBottom: 20 }}
       >
         Appointments
       </Typography>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} className={classes.tableContainer}>
         <Table sx={{ minWidth: 650 }}>
           <TableHead>
             <TableRow
@@ -82,7 +91,7 @@ const AppointmentsList = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+    </Container>
   );
 };
 

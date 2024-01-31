@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@mui/styles';
 import axios from 'axios';
 import {
   TextField,
@@ -9,9 +10,17 @@ import {
   Select,
   MenuItem,
   Typography,
+  Container,
 } from '@mui/material';
 
+const useStyles = makeStyles((theme) => ({
+  formContainer: {
+    padding: theme.spacing(8, 2),
+  },
+}));
+
 const Appointment = () => {
+  const classes = useStyles();
   const [appointment, setAppointment] = useState({
     patientName: '',
     email: '',
@@ -86,14 +95,21 @@ const Appointment = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <Container className={classes.formContainer}>
       <Typography
         variant='h4'
         style={{ textAlign: 'center', marginBottom: 20 }}
       >
         Book an Appointment
       </Typography>
-      <form onSubmit={handleSubmit} noValidate autoComplete='off'>
+
+      <form
+        id='appointment'
+        className='formContainerBox'
+        onSubmit={handleSubmit}
+        noValidate
+        autoComplete='on'
+      >
         <Grid container spacing={2} justifyContent='center'>
           <Grid item xs={12} md={6}>
             <TextField
@@ -160,7 +176,14 @@ const Appointment = () => {
             </FormControl>
           </Grid>
           <Grid item xs={12}>
-            <Button type='submit' fullWidth variant='contained' color='primary'>
+            <Button
+              type='submit'
+              fullWidth
+              variant='contained'
+              color='secondary'
+              size='large'
+              style={{ marginTop: '16px', borderRadius: '10px' }}
+            >
               Book Appointment
             </Button>
             {!isSlotAvailable && (
@@ -171,7 +194,7 @@ const Appointment = () => {
           </Grid>
         </Grid>
       </form>
-    </div>
+    </Container>
   );
 };
 

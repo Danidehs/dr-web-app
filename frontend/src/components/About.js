@@ -1,19 +1,53 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { useTheme } from '@mui/material/styles';
+import { Typography, Container, Grid } from '@mui/material';
+//import aboutImage from '../path--image.jpg';
+
+const useStyles = makeStyles(() => {
+  const theme = useTheme();
+  return {
+    aboutContainer: {
+      padding: theme.spacing(8, 2),
+      textAlign: 'center',
+    },
+    aboutImage: {
+      maxWidth: '100%',
+      height: 'auto',
+      borderRadius: theme.shape.borderRadius,
+    },
+    aboutText: {
+      marginTop: theme.spacing(2),
+      color: 'white',
+    },
+  };
+});
 
 const About = () => {
+  const classes = useStyles();
+
   return (
-    <div style={{ padding: 20 }}>
-      <Typography
-        variant='h4'
-        style={{ textAlign: 'center', marginBottom: 20, marginTop: 20 }}
-      >
-        About the Doctor
-      </Typography>
-      <p className='text-center'>
-        Dr. Erika Serna, a renowned specialist in aesthetic medicine...
-      </p>
-    </div>
+    <Container className={classes.aboutContainer}>
+      <Grid container spacing={4} alignItems='center' justifyContent='center'>
+        <Grid item xs={12} sm={6}>
+          <img
+            //src={aboutImage}
+            alt='About the clinic'
+            className={classes.aboutImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant='h4' gutterBottom>
+            Who We Are
+          </Typography>
+          <Typography variant='body1' className={classes.aboutText}>
+            Our clinic is dedicated to providing top-notch aesthetic medicine
+            services. With a team of experienced professionals, we ensure that
+            your beauty goals are met with the utmost care and precision.
+          </Typography>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

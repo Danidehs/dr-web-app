@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,37 +11,34 @@ import AppointmentsList from './components/AppointmentList';
 import Contact from './components/Contact';
 import './App.css';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#4caf50',
+    },
+    secondary: {
+      main: '#cdb450',
+    },
+  },
+});
+
 const App = () => {
   return (
-    <Router>
-      <div className='app-container'>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
         <Header />
         <Routes>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/services' component={Services} />
-          <Appointment />
-          <AppointmentsList />
-          <Route path='/contact' component={Contact} />
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/bookAppointment' element={<Appointment />} />
         </Routes>
-      </div>
-    </Router>
+        {/* <AppointmentsList /> */}
+      </Router>
+    </ThemeProvider>
   );
 };
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className='app-container'>
-//       <Home />
-//       <About />
-//       <Services />
-//       <Appointment />
-//       <AppointmentsList />
-//       <Contact />
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Typography, Button, Container } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   heroContainer: {
@@ -26,15 +27,17 @@ const Home = () => {
           Dedicated to providing the best in aesthetic medicine. We value your
           health and well-being above all else.
         </Typography>
-        <Button
-          variant='contained'
-          color='secondary'
-          size='large'
-          className='goldGradient'
-          style={{ marginTop: '16px', borderRadius: '10px' }}
-        >
-          Book an Appointment
-        </Button>
+        <Link to='/bookAppointment' className={classes.link}>
+          <Button
+            variant='contained'
+            color='secondary'
+            size='large'
+            className='goldGradient'
+            style={{ marginTop: '16px', borderRadius: '10px' }}
+          >
+            Book an Appointment
+          </Button>
+        </Link>
       </Container>
     </div>
   );

@@ -9,6 +9,7 @@ import Services from './components/Services';
 import Appointment from './components/Appointment';
 import AppointmentsList from './components/AppointmentList';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './App.css';
 
 const theme = createTheme({
@@ -37,6 +38,7 @@ const App = () => {
             <Route path='/bookAppointment' element={<Appointment />} />
           </Routes>
           {/* <AppointmentsList /> */}
+          <Footer />
         </Router>
       </div>
     </ThemeProvider>

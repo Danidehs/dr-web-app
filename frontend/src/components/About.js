@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { useTheme } from '@mui/material/styles';
 import { Typography, Container, Grid } from '@mui/material';
-//import aboutImage from '../path--image.jpg';
+import aboutImage from '../assets/aboutUs-img2.png';
 
 const useStyles = makeStyles(() => {
   const theme = useTheme();
@@ -12,13 +12,14 @@ const useStyles = makeStyles(() => {
       textAlign: 'center',
     },
     aboutImage: {
-      maxWidth: '100%',
+      maxWidth: '80%',
       height: 'auto',
-      borderRadius: theme.shape.borderRadius,
+      borderRadius: '100%',
+      marginLeft: theme.spacing(4),
     },
     aboutText: {
-      marginTop: theme.spacing(2),
-      color: 'white',
+      paddingTop: theme.spacing(4),
+      color: 'black',
     },
   };
 });
@@ -31,7 +32,7 @@ const About = () => {
       <Grid container spacing={4} alignItems='center' justifyContent='center'>
         <Grid item xs={12} sm={6}>
           <img
-            //src={aboutImage}
+            src={aboutImage}
             alt='About the clinic'
             className={classes.aboutImage}
           />

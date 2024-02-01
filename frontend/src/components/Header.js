@@ -1,11 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+//import { useTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(() => {
-  const theme = useTheme();
+  //const theme = useTheme();
   return {
     appBar: {
       backgroundColor: '#7ce380',
@@ -16,10 +16,7 @@ const useStyles = makeStyles(() => {
     },
     link: {
       textDecoration: 'none',
-      color: 'white',
-    },
-    menuButton: {
-      marginLeft: theme.spacing(1),
+      color: 'dark gray',
     },
   };
 });

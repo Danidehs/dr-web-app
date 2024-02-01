@@ -69,16 +69,8 @@ html body .MuiTypography-h2,
 html body .MuiTypography-h3,
 html body .MuiTypography-h4 {
   font-weight: bold; 
-  color: #cdb450; 
-}
-
-html body .button, html body .MuiButton-containedSecondary {
-  background-color: #cdb450; 
-  color: #333;
-}
-
-html body .button:hover, html body .MuiButton-containedPrimary:hover {
-  background-color: #e68900; 
+  color: #e7c952; 
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 html body .formContainerBox {
@@ -90,5 +82,53 @@ html body .formContainerBox {
 }
 
 .goldGradient {
-  background: linear-gradient(45deg, #f9f295, #e0aa3e, #faf398, #b88a44);
+  background: linear-gradient(60deg, #f9f295, #e0aa3e, #faf398, #b88a44);
+}
+
+/* Footer section */
+
+.footer {
+  margin-top: 5%;
+  padding: 16px 0;
+  color: #333;
+}
+
+.footer-top-border {
+  border-top: 2px solid #d0d0d0;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.footer-content {
+  padding: 16px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-heading, html body .MuiTypography-body1 {
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px; /* Adjust spacing between icons as needed */
+  
+}
+
+.footer-socials .MuiSvgIcon-root {
+  color: #505050; /* Icon color, adjust as needed */
+}
+
+.footer-bottom {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.footer-copy {
+  color: #6b6b6b;
+  margin-top: 16px;
 }
